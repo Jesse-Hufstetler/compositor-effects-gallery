@@ -1,0 +1,136 @@
+Windows 10.0.26300.0, .NET 10.0.15
+DWMWA_USE_HOSTBACKDROPBRUSH hr=0x00000000
+Surfaces: ok
+
+OK     	Frosted	blur > saturation > tint > noise	
+OK     	Clear heavy-blur glass	blur at 2x the slider, no tint	
+OK     	Lit rounded glass	blur x SceneLightingEffect (pill normal map; ambient, distant and point light)	
+OK     	Rim-lit clear glass	no added blur; bevel = exposure + saturation through a mask; SceneLightingEffect highlights	
+OK     	Host backdrop, no effect	CreateHostBackdropBrush as is	
+OK     	GaussianBlur	BlurAmount=2	
+OK     	GaussianBlur	BlurAmount=8	
+OK     	GaussianBlur	BlurAmount=30	
+OK     	GaussianBlur	BlurAmount=80	
+REFUSED	DirectionalBlur	sigma=14 angle=0	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	Shadow	sigma=4 colour=blue	0x80070057 The parameter is incorrect. Unsupported effect type.
+OK     	In-window BackdropBrush	CreateBackdropBrush + GaussianBlur 6	
+OK     	Saturation	0	
+OK     	Saturation	2	
+OK     	Tint	colour=(1, 0.6, 0.3)	
+OK     	ColorMatrix	R<G, G<B, B<R	
+OK     	Contrast	+0.8	
+OK     	Contrast	-0.7	
+OK     	Exposure	+1.5	
+OK     	Exposure	-1.5	
+OK     	HueRotation	120 degrees	
+OK     	Invert		
+OK     	Grayscale		
+OK     	Sepia	intensity=1	
+OK     	TemperatureAndTint	temperature=+0.8	
+OK     	TemperatureAndTint	temperature=-0.8 tint=+0.6	
+OK     	Opacity	0.4	
+OK     	LinearTransfer	slope=2 offset=-0.5	
+OK     	GammaTransfer	exponent=2.5	
+OK     	LuminanceToAlpha		
+OK     	ColorSource (Flood)	colour=(0.2, 0.5, 1, 0.6)	
+REFUSED	Posterize	3 levels	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	Brightness	white=(0.6,1) black=(0,0.2)	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	TableTransfer	table=1,0 (invert)	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	DiscreteTransfer	table=0,0.5,1	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	Premultiply		0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	UnPremultiply		0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	HighlightsAndShadows	highlights=-1 shadows=+1	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	ChromaKey	colour=white tolerance=0.3	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	RgbToHue	HSV	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	HueToRgb	HSV	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	WhiteLevelAdjustment	in=80 out=240	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	HdrToneMap	in=4000 out=300	0x80070057 The parameter is incorrect. Unsupported effect type.
+OK     	Blend	Mode=Multiply	
+OK     	Blend	Mode=Screen	
+OK     	Blend	Mode=Darken	
+OK     	Blend	Mode=Lighten	
+REFUSED	Blend	Mode=Dissolve	0x80070057 The parameter is incorrect. Unsupported blend mode.
+OK     	Blend	Mode=ColorBurn	
+OK     	Blend	Mode=LinearBurn	
+OK     	Blend	Mode=DarkerColor	
+OK     	Blend	Mode=LighterColor	
+OK     	Blend	Mode=ColorDodge	
+OK     	Blend	Mode=LinearDodge	
+OK     	Blend	Mode=Overlay	
+OK     	Blend	Mode=SoftLight	
+OK     	Blend	Mode=HardLight	
+OK     	Blend	Mode=VividLight	
+OK     	Blend	Mode=LinearLight	
+OK     	Blend	Mode=PinLight	
+OK     	Blend	Mode=HardMix	
+OK     	Blend	Mode=Difference	
+OK     	Blend	Mode=Exclusion	
+OK     	Blend	Mode=Hue	
+OK     	Blend	Mode=Saturation	
+OK     	Blend	Mode=Color	
+OK     	Blend	Mode=Luminosity	
+OK     	Blend	Mode=Subtract	
+OK     	Blend	Mode=Division	
+OK     	Composite	Mode=SourceOver	
+OK     	Composite	Mode=DestinationOver	
+OK     	Composite	Mode=SourceIn	
+OK     	Composite	Mode=DestinationIn	
+OK     	Composite	Mode=SourceOut	
+OK     	Composite	Mode=DestinationOut	
+OK     	Composite	Mode=SourceAtop	
+OK     	Composite	Mode=DestinationAtop	
+OK     	Composite	Mode=Xor	
+OK     	Composite	Mode=Plus	
+OK     	Composite	Mode=SourceCopy	
+REFUSED	Composite	Mode=BoundedSourceCopy	0x80070057 The parameter is incorrect. Unsupported composite mode.
+OK     	Composite	Mode=MaskInvert	
+OK     	ArithmeticComposite	multiply=1 (backdrop x rainbow)	
+OK     	ArithmeticComposite	0.5 backdrop + 0.5 rainbow	
+OK     	CrossFade	weight=0.5, backdrop / rainbow	
+OK     	AlphaMask	backdrop, soft round mask	
+OK     	DistantDiffuse	no input; azimuth=225 elevation=40	
+OK     	PointDiffuse	no input; light=(40,20,40)	
+OK     	SpotDiffuse	no input; light=(10,10,90) cone=35	
+OK     	DistantSpecular	no input; elevation=40 exp=16	
+OK     	PointSpecular	no input; light=(40,20,40) exp=16	
+OK     	SpotSpecular	no input; light=(10,10,90) exp=16	
+REFUSED	PointSpecular + height map	pill-shaped height map as the input	0x80070057 The parameter is incorrect. Invalid effect input.
+REFUSED	PointSpecular on backdrop	backdrop itself as the height map	0x80070057 The parameter is incorrect. Invalid effect input.
+OK     	SceneLightingEffect	x backdrop; pill normal map + 3 lights	
+REFUSED	Transform2D on backdrop	scale 2x, backdrop as the direct input	0x80070057 The parameter is incorrect. Invalid argument to parameter value. Backdrop brushes cannot be transformed.
+OK     	Transform2D over Blur 0	scale 2x: accepted, no visible change	
+OK     	Transform2D over Blur 0	scale 0.5x: accepted, no visible change	
+OK     	Transform2D over Blur 0	rotate 20 degrees: accepted, no change	
+OK     	Transform2D over Blur 0	skew x 30 degrees: accepted, no change	
+OK     	Transform2D over Blur 0	mirror: accepted, no visible change	
+OK     	Transform2D over Blur 3	scale 3x: accepted, only the blur shows	
+REFUSED	Transform2D over Saturation	scale 2x; an effect other than blur in between	0x80070057 The parameter is incorrect. AffineTransform2D's source must be a source parameter.
+OK     	Transform2D on a surface	rainbow rotated 20 degrees (control)	
+OK     	Border	Mirror on backdrop, then GaussianBlur 30	
+OK     	Border	Wrap on a 32 px rainbow surface	
+OK     	Border	Mirror on a 32 px rainbow surface	
+REFUSED	Border over an effect	Mirror over Transform2D	0x80070057 The parameter is incorrect. BorderEffect's source must be a source parameter.
+OK     	Visual.RotationAngle	sprite turns 15 degrees, backdrop in it stays put	
+OK     	Visual.Scale	sprite grows 2x, backdrop in it stays put	
+OK     	CompositionVisualSurface	surface of a backdrop sprite: comes out black	
+REFUSED	DisplacementMap	scale=40, sine ripple map	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	DisplacementMap	scale=40, over GaussianBlur 0	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	Turbulence	noise generator, frequency=0.03	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	3DTransform	rotate Y 35 degrees + perspective	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	3DPerspectiveTransform	rotate Y 35 degrees depth=400	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	Scale	2x about centre	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	Crop	middle half	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	Tile	40x40 from the top left	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	Atlas	middle half	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	Straighten	angle=15	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	DpiCompensation	input dpi=192	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	Morphology	Dilate 7x7	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	Morphology	Erode 7x7	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	ConvolveMatrix	3x3 sharpen kernel	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	Emboss	height=2 direction=45	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	EdgeDetection	strength=0.8 Sobel	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	Sharpen	sharpness=8	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	Vignette	strength=0.8	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	OpacityMetadata		0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	Histogram	256 bins	0x80070057 The parameter is incorrect. Unsupported effect type.
+REFUSED	YCbCr	backdrop as both planes	0x80070057 The parameter is incorrect. Unsupported effect type.

@@ -1,0 +1,44 @@
+REFUSED  DistantDiffuse(source parameter) alone  0x80070057 The parameter is incorrect.  Invalid effect input.
+REFUSED  DistantDiffuse(Opacity(source parameter))  0x80070057 The parameter is incorrect.  Invalid effect input.
+REFUSED  DistantDiffuse(LuminanceToAlpha(source parameter))  0x80070057 The parameter is incorrect.  Invalid effect input.
+REFUSED  DistantDiffuse(GaussianBlur(source parameter))  0x80070057 The parameter is incorrect.  Invalid effect input.
+REFUSED  PointSpecular(source parameter) alone  0x80070057 The parameter is incorrect.  Invalid effect input.
+REFUSED  SpotSpecular(source parameter) alone  0x80070057 The parameter is incorrect.  Invalid effect input.
+REFUSED  Composite Plus(bg, PointSpecular(source parameter))  0x80070057 The parameter is incorrect.  Invalid effect input.
+REFUSED  Blend Screen(bg, PointSpecular(source parameter))  0x80070057 The parameter is incorrect.  Invalid effect input.
+REFUSED  Arithmetic(bg, PointSpecular(source parameter))  0x80070057 The parameter is incorrect.  Invalid effect input.
+OK       Arithmetic(bg, SceneLightingEffect)  (LoadStatus Pending)
+OK       SceneLightingEffect alone  (LoadStatus Pending)
+REFUSED  DistantDiffuse scale=1 (height map defaults)  0x80070057 The parameter is incorrect.  Invalid effect input.
+REFUSED  PointSpecular scale=1  0x80070057 The parameter is incorrect.  Invalid effect input.
+REFUSED  SpotDiffuse scale=1  0x80070057 The parameter is incorrect.  Invalid effect input.
+REFUSED  Arithmetic(bg, PointSpecular scale=1)  0x80070057 The parameter is incorrect.  Invalid effect input.
+REFUSED  PointSpecular scale=1 on GaussianBlur(source parameter)  0x80070057 The parameter is incorrect.  Invalid effect input.
+REFUSED  Saturation with a wrong property type (control)  0x80070057 The parameter is incorrect.  Unexpected property type.
+OK       Transform2D(GaussianBlur 0)   (LoadStatus Pending)
+REFUSED  Transform2D(Transform2D(source parameter))  0x80070057 The parameter is incorrect.  AffineTransform2D's source must be a source parameter.
+REFUSED  Composite(Transform2D(GaussianBlur), Transform2D(GaussianBlur))  0x80070057 The parameter is incorrect.  Non-tree shaped effect graph.
+OK       AlphaMask(Transform2D(GaussianBlur(bg)), mask)  (LoadStatus Pending)
+OK       GaussianBlur(Transform2D(GaussianBlur))  (LoadStatus Pending)
+OK       PointSpecular with a null source  (LoadStatus Pending)
+OK       DistantDiffuse with a null source  (LoadStatus Pending)
+OK       SpotSpecular with a null source  (LoadStatus Pending)
+OK       Arithmetic(bg, PointSpecular null source)  (LoadStatus Pending)
+REFUSED  PointSpecular with no sources at all  0x80070057 The parameter is incorrect.  Invalid number of sources.
+OK       Transform2D(source parameter)  (LoadStatus Pending)
+OK       Transform2D(GaussianBlur(source parameter))  (LoadStatus Pending)
+OK       Border Wrap(source parameter)  (LoadStatus Pending)
+OK       GaussianBlur(Border Mirror(source parameter))  (LoadStatus Pending)
+REFUSED  Transform2D(Border Mirror(source parameter))  0x80070057 The parameter is incorrect.  AffineTransform2D's source must be a source parameter.
+REFUSED  bind host backdrop to Transform2D(source parameter)  0x80070057 The parameter is incorrect.  Invalid argument to parameter value. Backdrop brushes cannot be transformed.
+OK       bind host backdrop to Transform2D(GaussianBlur(source parameter))
+REFUSED  bind host backdrop to Transform2D(Saturation(source parameter))  0x80070057 The parameter is incorrect.  AffineTransform2D's source must be a source parameter.
+REFUSED  bind host backdrop to GaussianBlur(Transform2D(...)) inner  0x80070057 The parameter is incorrect.  Invalid argument to parameter value. Backdrop brushes cannot be transformed.
+REFUSED  bind in-window backdrop (CreateBackdropBrush) to Transform2D  0x80070057 The parameter is incorrect.  Invalid argument to parameter value. Backdrop brushes cannot be transformed.
+OK       bind host backdrop to Border Mirror
+REFUSED  bind host backdrop to DistantDiffuse  0x80070057 The parameter is incorrect.  Invalid effect input.
+REFUSED  bind an effect brush (blurred backdrop) to Transform2D  0x80070057 The parameter is incorrect.  Invalid argument to parameter value. Effect brushes cannot be transformed.
+REFUSED  CompositionNineGridBrush.Source = host backdrop  0x80070057 The parameter is incorrect.  Invalid argument to parameter value. Unsupported source brush type.
+REFUSED  CompositionMaskBrush.Source = host backdrop  0x80070057 The parameter is incorrect.  Invalid argument to parameter value. Unsupported source brush type.
+REFUSED  CompositionMaskBrush.Mask = host backdrop  0x80070057 The parameter is incorrect.  Invalid argument to parameter value. Unsupported source brush type.
+OK       CompositionVisualSurface of a host-backdrop sprite (creation only)
